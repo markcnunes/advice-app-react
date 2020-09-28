@@ -25,11 +25,11 @@ const FetchAdvice = () => {
   }, []);
 
   return loading ? (
-    <div>...loading</div>
+    <div className="advice">...loading</div>
   ) : (
-    <div>
+    <div className="advice">
       <h1>{advice}</h1>
-      <button onClick={fetchData}>Give me advice!</button>
+      <button onClick={fetchData}>Give me another advice!</button>
     </div>
   );
 };
