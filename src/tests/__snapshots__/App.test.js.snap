@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App test render component 1`] = `
+<div
+  className="App"
+>
+  <FetchAdvice />
+  <footer>
+    <a
+      className="button button--primary"
+      href="https://markclausnunes.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="mark Claus Nunes"
+    >
+      Created by Mark -
+       
+    </a>
+    <a
+      className="button button--primary"
+      href="https://unsplash.com/photos/FwiNLpZdKVk/"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Photo by Evgeni Tcherkasski"
+    >
+      Photo by Evgeni Tcherkasski
+    </a>
+  </footer>
+</div>
+`;

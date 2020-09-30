@@ -6,31 +6,24 @@ const FetchAdvice = () => {
   const [ourAdvice, setOurAdvice] = useState("");
 
   const fetchData = async () => {
-    // alert("click");
-    return await axios
-      .get("https://api.adviceslip.com/advice", {
-        "Content-Type": "application/xml; charset=utf-8",
-      })
-      .then((response) => {
-        const { advice } = response.data.slip;
-        return advice;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    return await axios.get("https://api.adviceslip.com/advice", {
+      "Content-Type": "application/xml; charset=utf-8",
+    });
   };
 
   useEffect(() => {
     fetchData().then((res) => {
-      setOurAdvice(res);
+      setOurAdvice(res.data.slip.advice);
       setLoading(false);
     });
   }, []);
 
   const handleClick = () => {
-    fetchData().then((res) => {
-      setOurAdvice(res);
-    });
+    fetchData()
+      .then((res) => {
+        setOurAdvice(res.data.slip.advice);
+      })
+      .catch((err) => console.log(err));
   };
 
   return loading ? (
